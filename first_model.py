@@ -171,12 +171,6 @@ def three_models_w():
     data_train_1, data_valid_1 = separate_train(data_train.copy(), 0, 1)
     data_train_2, data_valid_2 = separate_train(data_train.copy(), 0, 2)
 
-    """w1 = test_model(LogisticRegression, first_w, data_train_0, data_valid_0)
-
-    w2 = test_model(LogisticRegression, first_w, data_train_1, data_valid_1)
-
-    w3 = test_model(LogisticRegression, first_w, data_train_2, data_valid_2)"""
-
     w1 = test_model(LogisticRegression, first_w, data_train_0)
 
     w2 = test_model(LogisticRegression, first_w, data_train_1)
