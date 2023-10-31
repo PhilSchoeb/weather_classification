@@ -41,25 +41,50 @@ data_test = np.delete(data_test, 0, axis=1)
 
 
 
-X=Data[:,0:15]
-y=Data[:,-1]
+X=data_train[:,0:15]
+y=data_train[:,-1]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-n_samples = 100
-n_features = 16
-n_classes = 3
 
 
 
 
-# Predicted labels for the test set
-predicted_labels = np.argmax(ppc['y_obs'], axis=1)
 
-print("Predicted labels for the test set:")
-print(predicted_labels)
+
+
+# Define the PyMC3 model
+with pm.Model() as model:
+    # Prior for class probabilities
+    p = pm.Dirichlet('p', a=np.ones(3))
+
+    # Multinomial distribution for class assignment
+    class_assignment = pm.Categorical('class_assignment', p=p, shape=(35808,15))
+
+    # Likelihood for observed data
+    likelihood = pm.Normal(
+        'likelihood', mu=X_train_scaled[class_assignment], sigma=1, observed=X_train_scaled)
+
+# Perform Bayesian inference using PyMC3
+with model:
+    trace = pm.sample(2000, tune=1000)
+
+# Extract the posterior class probabilities
+posterior_class_probs = trace['p'].mean(axis=0)
+
+# Make predictions using the class probabilities
+predicted_labels = np.argmax(posterior_class_probs, axis=0)
+
+# Evaluate the model (e.g., accuracy, confusion matrix, etc.)
+accuracy = (predicted_labels == y_train).mean()
+print(f'Accuracy: {accuracy}')
+
+
+
+
+
 
 
