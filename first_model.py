@@ -2,6 +2,7 @@ import random
 import numpy as np
 import csv
 
+
 number_steps = 2000
 stepsize = 1
 reg = 0
@@ -9,8 +10,8 @@ reg = 0
 
 def data_preprocessing():
     # Read file to get data
-    file1 = open("./climate_data/train.csv")
-    file2 = open("./climate_data/test.csv")
+    file1 = open("train.csv")
+    file2 = open("test.csv")
 
     csvreader1 = csv.reader(file1)
     csvreader2 = csv.reader(file2)
