@@ -1,6 +1,9 @@
 # weather_classification
-IFT3395 Compétition Kaggle 1, 8 novembre 2023
+IFT3395 Compétition Kaggle 1
+
 Philippe Schoeb, Amine Obeid et Abubakar Garibar Mama
+
+8 novembre 2023
 
 Voici nos deux modèles les mieux réussis.
 D'abord, il y a notre modèle de régression logistique qui était obligatoire.
