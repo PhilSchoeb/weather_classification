@@ -6,11 +6,12 @@ import random
 import numpy as np
 import csv
 
-# Constants
-gradient_max = 0.0005
-number_steps = 4000
-stepsize = 0.5
-reg = 0
+# Hyperparameters
+gradient_max = 0.0005 # If the gradient has a norm inferior to this, we stop the gradient descent
+number_steps = 2000 # If the number of iterations for gradient descent is superior to this, we stop the gradient
+# descent
+stepsize = 1 # Multiplies the gradient when lowering w in the gradient descent
+reg = 0 # Regularisation to avoid overfitting
 
 # Modify all our data to only keep specific features. Train and test data are modified by keeping features identified
 # in the kept_features array. For example :

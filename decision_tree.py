@@ -6,8 +6,8 @@ import numpy as np
 import csv
 from sklearn.tree import DecisionTreeClassifier
 
-# Constant
-max_depth = 6
+# Hyperparameter
+max_depth = 6 # Max depth of the decision tree
 
 
 # Data processing
