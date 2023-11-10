@@ -1,4 +1,6 @@
-import pandas as pd
+# Code by Philippe Schoeb, Amine Obeid and Abubakar Garibar Mama
+# November 8th 2023
+
 import numpy as np
 import csv
 from sklearn.model_selection import train_test_split
