@@ -1,5 +1,5 @@
 # weather_classification
-IFT3395 Compétition Kaggle 1
+Compétition Kaggle 1 en apprentissage automatique (IFT3395) 
 
 Philippe Schoeb, Amine Obeid et Abubakar Garibar Mama
 
@@ -26,5 +26,3 @@ de deux hyper-paramètres (proportions de points de classe 1 et 2) en faisant du
 
 Sinon, à vous de modifier les fichiers python pour utiliser nos fonctions intermédiaires. Nous avons gardé certaines
 fonctions inutilisées seulement si elles nous ont aidé à atteindre une conclusion durant la compétition.
-
-Voilà, merci!
