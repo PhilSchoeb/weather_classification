@@ -3,6 +3,8 @@ Compétition Kaggle 1 en apprentissage automatique (IFT3395)
 
 Philippe Schoeb, Amine Obeid et Abubakar Garibar Mama
 
+Voici le [rapport](https://www.overleaf.com/read/cfpxkmycwpqb#b90697) que nous avons écrit pour ce travail.
+
 8 novembre 2023
 
 Voici nos trois modèles pour cette compétition Kaggle.
