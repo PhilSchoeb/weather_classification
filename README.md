@@ -1,9 +1,9 @@
 # weather_classification
 Compétition Kaggle 1 en apprentissage automatique (IFT3395) 
 
-Philippe Schoeb, Amine Obeid et Abubakar Garibar Mama
-
 Voici le [rapport](https://www.overleaf.com/read/cfpxkmycwpqb#b90697) que nous avons écrit pour ce travail.
+
+Philippe Schoeb, Amine Obeid et Abubakar Garibar Mama
 
 8 novembre 2023
 
